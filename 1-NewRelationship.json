@@ -1,0 +1,89 @@
+{
+    "relationshipDefs": [
+        {
+            "category": "RELATIONSHIP",
+            "createdBy": "spyder",
+            "updatedBy": "spyder",
+            "version": 1,
+            "name": "AtlasGlossaryTestRelationship",
+            "description": "A Test Term Relationship used for custom Ontological fields",
+            "typeVersion": "1",
+            "serviceType": "atlas_core",
+            "attributeDefs": [
+                {
+                    "name": "description",
+                    "typeName": "string",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": true,
+                    "includeInNotification": false,
+                    "description": "The description field can be used to add details about the relationship."
+                },
+                {
+                    "name": "expression",
+                    "typeName": "string",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": true,
+                    "includeInNotification": false
+                },
+                {
+                    "name": "status",
+                    "typeName": "AtlasGlossaryTermRelationshipStatus",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": true,
+                    "includeInNotification": false
+                },
+                {
+                    "name": "steward",
+                    "typeName": "string",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": true,
+                    "includeInNotification": false,
+                    "description": "The steward is the person responsible for assessing the relationship and deciding if it should be approved or not"
+                },
+                {
+                    "name": "source",
+                    "typeName": "string",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": true,
+                    "includeInNotification": false
+                }
+            ],
+            "relationshipCategory": "ASSOCIATION",
+            "propagateTags": "NONE",
+            "endDef1": {
+                "type": "AtlasGlossaryTerm",
+                "name": "test",
+                "isContainer": false,
+                "cardinality": "SET",
+                "isLegacyAttribute": false
+            },
+            "endDef2": {
+                "type": "AtlasGlossaryTerm",
+                "name": "test",
+                "isContainer": false,
+                "cardinality": "SET",
+                "isLegacyAttribute": false
+            }
+        }
+    ]
+}

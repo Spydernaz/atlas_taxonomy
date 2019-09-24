@@ -1,0 +1,16 @@
+{
+    "guid": "ac113632-c386-445a-84b9-753b0104aafc",
+    "qualifiedName": "terma@testA",
+    "name": "terma",
+    "anchor": {
+        "glossaryGuid": "2cf6be04-7392-449f-8b20-a9a551662784",
+        "relationGuid": "cf55296d-98e7-4765-846c-2ea005d8e9b3"
+    },
+    "test": [
+        {
+            "termGuid": "e291e60a-ed0d-4077-8e27-a902c945b525",
+            "relationGuid": "45c6598d-4572-49f9-a772-d8a4b312861c",
+            "displayText": "termb"
+        }
+    ]
+}

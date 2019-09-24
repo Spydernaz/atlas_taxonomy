@@ -1,0 +1,16 @@
+{
+    "end1": {
+        "guid": "",
+        "typeName": "AtlasGlossaryTerm"
+    },
+    "end2": {
+        "guid": "",
+        "typeName": "AtlasGlossaryTerm"
+    },
+    "label": "A test label",
+    "propagateTags": "NONE",
+    "status": "ACTIVE",
+    "version": 1,
+    "attributes": {},
+    "typeName": "AtlasGlossaryTestRelationship"
+}
