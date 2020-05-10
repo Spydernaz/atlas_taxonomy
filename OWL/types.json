@@ -1,0 +1,154 @@
+{
+    "entityDefs": [{
+            "category": "ENTITY",
+            "createdBy": "spydernaz",
+            "updatedBy": "spydernaz",
+            "version": 1,
+            "superTypes": [
+                "Asset"
+            ],
+            "name": "Ontology",
+            "description": "A structure that represents an ontology",
+            "typeVersion": "1",
+            "attributeDefs": [{
+                    "name": "Ontology IRI",
+                    "typeName": "string",
+                    "isOptional": false,
+                    "cardinality": "SINGLE",
+                    "isUnique": true,
+                    "isIndexable": true,
+                    "includeInNotification": true
+                },
+                {
+                    "name": "imports",
+                    "typeName": "array<Ontology>",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                }
+            ]
+        },
+        {
+            "category": "ENTITY",
+            "createdBy": "spydernaz",
+            "updatedBy": "spydernaz",
+            "version": 1,
+            "superTypes": [
+                "Ontology"
+            ],
+            "name": "Class",
+            "description": "concepts that are also called type, sort, category, and kind – can be defined as an extension or an intension. According to an extensional definition, they are abstract groups, sets, or collections of objects",
+            "typeVersion": "1",
+            "attributeDefs": [{
+                    "name": "Parent Ontology",
+                    "typeName": "Ontology",
+                    "isOptional": false,
+                    "cardinality": "SINGLE",
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                },
+                {
+                    "name": "references",
+                    "typeName": "array<DataSet>",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                }
+            ]
+        },
+        {
+            "category": "ENTITY",
+            "createdBy": "spydernaz",
+            "updatedBy": "spydernaz",
+            "version": 1,
+            "superTypes": [
+                "Ontology"
+            ],
+            "name": "Attribute",
+            "description": "Objects in an ontology can be described by relating them to other things, typically aspects or parts. These related things are often called attributes, although they may be independent things",
+            "typeVersion": "1",
+            "attributeDefs": [{
+                    "name": "Parent Ontology",
+                    "typeName": "Ontology",
+                    "isOptional": false,
+                    "cardinality": "SINGLE",
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                },
+                {
+                    "name": "references",
+                    "typeName": "array<DataSet>",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                }
+            ]
+        }
+    ],
+    "classificationDefs": [{
+            "category": "CLASSIFICATION",
+            "createdBy": "Nathaniel Vala",
+            "version": 1,
+            "name": "mdtag",
+            "description": "classification5c",
+            "typeVersion": "1.0",
+            "attributeDefs": [{
+                    "name": "country",
+                    "typeName": "string",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                },
+                {
+                    "name": "client",
+                    "typeName": "string",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                },
+                {
+                    "name": "context",
+                    "typeName": "array<string>",
+                    "isOptional": true,
+                    "cardinality": "SINGLE",
+                    "valuesMinCount": 0,
+                    "valuesMaxCount": 1,
+                    "isUnique": false,
+                    "isIndexable": false,
+                    "includeInNotification": false
+                }
+            ],
+            "superTypes": [],
+            "entityTypes": [],
+            "subTypes": []
+        },
+        {
+            "category": "CLASSIFICATION",
+            "createdBy": "Nathaniel Vala",
+            "version": 1,
+            "name": "PII",
+            "description": "PII",
+            "typeVersion": "1.0",
+            "attributeDefs": [],
+            "superTypes": [],
+            "entityTypes": [],
+            "subTypes": []
+        }
+    ]
+}

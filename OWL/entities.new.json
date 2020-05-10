@@ -1,0 +1,75 @@
+{
+    "entities": [
+        {
+            "guid": "-200",
+            "typeName": "Contract",
+            "attributes": {
+                "qualifiedName": "lbg#123445672@engagaments.dataagenda.ey.net",
+                "name": "LBG Engagement ID # 123445672",
+                "version": "1"
+            },
+            "classifications": [
+                { 
+                    "typeName": "PII",
+                    "propagate": true
+                }
+            ]
+        },
+        {
+            "guid": "-100",
+            "typeName": "permissionOutput",
+            "attributes": {
+                "qualifiedName": "5cmodelv1.0-dev#112fe+lbg#123445672@permissions.legal.dataagenda.ey.net",
+                "name": "LBG Engagement ID # 123445672",
+                "outputs": [
+                    {
+                        "guid": "-300",
+                        "typeName": "fs_path"
+                    }
+                ],
+                "inputs":[
+                    {
+                        "guid": "-200",
+                        "typeName": "Contract"
+                    },
+                    {
+                        "uniqueAttributes": {
+                            "qualifiedName": "5cmodelv1.0-dev#112fe@models.dataagenda.ey.net"
+                        },
+                        "typeName": "Model"
+                    }
+                ],
+                "version": "1"
+            },
+            "classifications": [
+                {
+                    "typeName": "classification5c",
+                    "attributes": {
+                        "context": ["ML Training", "Benchmarking"],
+                        "channel": 2,
+                        "country": "UK",
+                        "client": "clienta"
+                    },
+                    "propagate": true,
+                    "removePropagationsOnEntityDelete": false
+                }
+            ]
+        },
+        {
+            "guid": "-300",
+            "typeName": "hdfs_path",
+            "attributes": {
+                "qualifiedName": "hdfs://sandbox-hdp.hortonworks.com:8020/demo_data@Sandbox",
+                "name": "/demo_data",
+                "path":"hdfs://sandbox-hdp.hortonworks.com:8020/demo_data",
+                "inputs": [
+                    {
+                        "guid":"-100",
+                        "typeName":"permissionOutput"
+                    }
+                ],
+                "version": "1"
+            }
+        }
+    ]
+}
